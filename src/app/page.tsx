@@ -34,15 +34,14 @@ export default function Home() {
           <Container className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
             <div className="space-y-8">
               <div className="space-y-5">
-                <Badge>Built for Innovation Quest judges and launch-day students</Badge>
+                <Badge>The AI-powered study assistant for the modern student</Badge>
                 <h1 className="max-w-4xl text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
-                  GURT - the all-in-one, AI-powered study assistant that centralizes resources and
-                  reduces friction for the modern student.
+                  GURT
                 </h1>
                 <p className="max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">
-                  GURT opens directly on the Canvas course page, ingests the full course context,
-                  and turns scattered materials into cited answers, flashcards, practice exams, and
-                  calendar-ready review plans.
+                  GURT (Generative Uni Revision Tool) pops up on Canvas course pages, ingests full
+                  course context, and turns scattered materials into cited answers, flashcards,
+                  practice exams, and calendar-ready review plans.
                 </p>
               </div>
               <div className="flex flex-col gap-4 sm:flex-row">
@@ -155,7 +154,7 @@ export default function Home() {
           id="problem"
           eyebrow="Why this matters"
           title="Students lose time to friction before they even start studying."
-          description="Judges need to see a product that solves real workflow pain, not just a prettier chatbot. GURT reduces context switching, copy-paste busywork, and trust issues that come with uncited AI answers."
+          description="GURT reduces context switching, copy-paste busywork, and trust issues that come with uncited AI answers."
         >
           <div className="grid gap-5 md:grid-cols-3">
             {problemPoints.map((point) => (
@@ -170,9 +169,9 @@ export default function Home() {
 
         <Section
           id="story"
-          eyebrow="GURT in action"
+          eyebrow="See it to believe it"
           title="GURT in action"
-          description="A scroll-driven study flow that starts on the Canvas course page. On desktop, the product story stays pinned while the workflow advances step by step. On mobile and reduced-motion settings, the same story becomes a clean stacked walkthrough."
+          description="From assignment to A+"
         >
           <ScrollStory steps={storySteps} />
         </Section>
@@ -180,8 +179,8 @@ export default function Home() {
         <Section
           id="features"
           eyebrow="Feature set"
-          title="The core study loop is centralized instead of scattered."
-          description="These are the required product surfaces the marketing site needs to make obvious within seconds."
+          title="Finally, a centralized study hub"
+          description="No more fractured systems. Everything you need in one place."
         >
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
             {featureCards.map((feature) => (
@@ -198,7 +197,7 @@ export default function Home() {
           id="trust"
           eyebrow="Why you can trust it"
           title="Built around retrieval, citations, and verifiable course context."
-          description="This is not a generic chat wrapper. GURT ingests course materials into a knowledge base, retrieves against the course context, and returns answers that point back to the source."
+          description="Unlike other LLM wrappers, GURT ingests course materials into a knowledge base, retrieves against the course context, and returns answers that point back to the source."
         >
           <div className="grid gap-5 lg:grid-cols-3">
             {trustPoints.map((point) => (
@@ -210,15 +209,10 @@ export default function Home() {
           </div>
         </Section>
 
-        <Section
-          id="demo"
-          eyebrow="Demo"
-          title="Demo"
-          description="See the workflow in motion. The embedded player loads on demand to keep the page light."
-        >
+        <Section id="demo" eyebrow="Demo" title="Demo" description="See the workflow in motion.">
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
             <Card className="border-white/8 bg-white/5 p-6">
-              <h3 className="text-2xl font-semibold text-white">What the demo emphasizes</h3>
+              <h3 className="text-2xl font-semibold text-white">How GURT works</h3>
               <ul className="mt-5 space-y-4 text-base leading-7 text-slate-300">
                 <li>The Chrome extension opens directly on a Canvas course page.</li>
                 <li>Course materials are ingested into a knowledge base with minimal setup.</li>
@@ -235,8 +229,8 @@ export default function Home() {
         <Section
           id="faq"
           eyebrow="FAQ"
-          title="Questions judges are likely to ask."
-          description="The answers stay grounded in the current prototype scope: workflow credibility, trust, privacy, and launch readiness."
+          title="Frequently Asked Questions"
+          description="Workflow credibility, trust, privacy, and launch readiness."
         >
           <div className="space-y-4">
             {faqs.map((faq) => (
@@ -257,15 +251,14 @@ export default function Home() {
           id="waitlist"
           eyebrow="Launch access"
           title="Join the waitlist for free-trial access at launch."
-          description="Use the waitlist to capture judges, early student testers, and anyone who wants to see the first public release."
+          description="Waitlist access is open to early student testers anyone who wants to see the first public release."
         >
           <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
             <Card className="border-white/8 bg-gradient-to-br from-[#c40f11]/18 to-[#4f68f9]/14 p-6">
               <h3 className="text-3xl font-semibold text-white">What happens next</h3>
               <ul className="mt-5 space-y-4 text-base leading-7 text-slate-200">
                 <li>Waitlist members get first notice when the free trial opens.</li>
-                <li>Judges can follow the launch without navigating the main app codebase.</li>
-                <li>Only minimal contact information is collected for launch communication.</li>
+                <li>We&apos;ll also send occasional updates about GURT.</li>
               </ul>
             </Card>
             <WaitlistForm />

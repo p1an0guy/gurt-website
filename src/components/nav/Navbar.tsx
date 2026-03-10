@@ -21,7 +21,6 @@ export function Navbar() {
           </div>
           <div>
             <p className="text-lg font-semibold tracking-tight">GURT</p>
-            <p className="text-xs tracking-[0.26em] text-slate-400 uppercase">Marketing site</p>
           </div>
         </Link>
         <nav className="hidden items-center gap-8 lg:flex">

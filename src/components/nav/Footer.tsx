@@ -20,9 +20,6 @@ export function Footer() {
             </div>
             <div>
               <p className="text-lg font-semibold text-white">{siteConfig.name}</p>
-              <p className="text-sm text-slate-400">
-                Judge-facing marketing site for launch-day waitlist conversion.
-              </p>
             </div>
           </div>
         </div>

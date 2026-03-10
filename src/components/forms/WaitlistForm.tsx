@@ -12,9 +12,7 @@ const placeholderEndpoints = [
 export function WaitlistForm() {
   const endpoint = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT ?? '';
   const [status, setStatus] = useState<'idle' | 'error' | 'success' | 'submitting'>('idle');
-  const [message, setMessage] = useState(
-    'Launch updates only. No backend account is required for the waitlist.',
-  );
+  const [message, setMessage] = useState('');
 
   return (
     <Card className="border-white/8 bg-white/5 p-6">
@@ -83,7 +81,7 @@ export function WaitlistForm() {
         <div className="space-y-2">
           <h3 className="text-3xl font-semibold text-white">Request launch access</h3>
           <p className="text-base leading-7 text-slate-300">
-            Join the free-trial waitlist for launch-day updates, judge follow-up, and early access.
+            Join the free-trial waitlist for launch updates and early access.
           </p>
         </div>
 
