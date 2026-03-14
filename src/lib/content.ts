@@ -43,7 +43,7 @@ export const siteConfig = {
   title: 'GURT | AI-powered Canvas study assistant',
   description:
     'Judge-facing marketing site for GURT, the AI-powered study assistant that ingests Canvas course context, returns cited answers, and centralizes review tools.',
-  url: 'https://gurt-marketing.vercel.app',
+  url: 'https://gurt-website.vercel.app',
 } as const;
 
 export const navLinks: NavLink[] = [
