@@ -5,7 +5,6 @@ test('homepage renders key conversion elements', async ({ page }) => {
 
   await expect(page.getByRole('heading', { level: 1 })).toContainText(/GURT/i);
   await expect(page.getByRole('button', { name: /join.*waitlist/i }).first()).toBeVisible();
-  await expect(page.getByRole('heading', { level: 2, name: /^Demo$/i })).toBeVisible();
   await expect(page.getByRole('heading', { level: 2, name: /gurt in action/i })).toBeVisible();
   await expect(page.getByLabel(/email/i)).toBeVisible();
 });

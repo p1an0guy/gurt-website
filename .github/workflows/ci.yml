@@ -39,6 +39,5 @@ jobs:
 
       - name: Run E2E smoke tests
         env:
-          NEXT_PUBLIC_YOUTUBE_ID: 'dQw4w9WgXcQ'
           NEXT_PUBLIC_FORMSPREE_ENDPOINT: 'https://formspree.io/f/placeholder'
         run: npm run test:e2e

@@ -1,8 +1,8 @@
+import Image from 'next/image';
 import type { Metadata } from 'next';
 import { Footer } from '@/components/nav/Footer';
 import { Navbar } from '@/components/nav/Navbar';
 import { WaitlistForm } from '@/components/forms/WaitlistForm';
-import { YouTubeEmbed } from '@/components/media/YouTubeEmbed';
 import { Container } from '@/components/layout/Container';
 import { Section } from '@/components/layout/Section';
 import { ScrollStory } from '@/components/story/ScrollStory';
@@ -48,8 +48,8 @@ export default function Home() {
                 <Button scrollToId="waitlist" size="lg">
                   Join the waitlist
                 </Button>
-                <Button href="#demo" variant="secondary" size="lg">
-                  Watch the demo
+                <Button href="#story" variant="secondary" size="lg">
+                  See GURT in action
                 </Button>
               </div>
               <ul className="flex flex-wrap gap-3">
@@ -70,81 +70,24 @@ export default function Home() {
               </a>
             </div>
             <Card className="relative overflow-hidden border-white/12 bg-white/6 p-4 shadow-2xl shadow-black/35 backdrop-blur">
-              <div className="rounded-[2rem] border border-white/12 bg-[#0f131c] p-5">
-                <div className="mb-4 flex items-center justify-between">
-                  <div>
-                    <p className="text-sm font-medium text-slate-300">Canvas course companion</p>
-                    <p className="text-xs tracking-[0.3em] text-slate-500 uppercase">
-                      Chrome extension workflow
-                    </p>
-                  </div>
-                  <Badge variant="accent">RAG + citations</Badge>
+              <div className="mb-4 flex items-center justify-between">
+                <div>
+                  <p className="text-sm font-medium text-slate-300">Canvas course companion</p>
+                  <p className="text-xs tracking-[0.3em] text-slate-500 uppercase">
+                    Real extension screenshot
+                  </p>
                 </div>
-                <div className="grid gap-4 lg:grid-cols-[1.15fr_0.85fr]">
-                  <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 to-transparent p-4">
-                    <div className="mb-4 flex items-center justify-between">
-                      <div>
-                        <p className="text-sm text-slate-400">Live course chat</p>
-                        <p className="text-lg font-medium text-white">What is due next week?</p>
-                      </div>
-                      <span className="rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-xs font-semibold text-emerald-200">
-                        Answer grounded
-                      </span>
-                    </div>
-                    <div className="space-y-4 rounded-2xl border border-white/8 bg-slate-950/60 p-4">
-                      <div className="rounded-2xl bg-[#181d29] p-4 text-sm leading-7 text-slate-200">
-                        Your cognitive psychology quiz is Friday at 9:00 AM, and the review
-                        worksheet is linked in Module 6. The memory encoding slides are the best
-                        prep source.
-                      </div>
-                      <div className="grid gap-3 sm:grid-cols-2">
-                        <div className="rounded-2xl border border-white/8 bg-white/5 p-3">
-                          <p className="text-xs tracking-[0.3em] text-slate-500 uppercase">
-                            Citation
-                          </p>
-                          <p className="mt-2 text-sm font-medium text-white">
-                            Module 6 / Review PDF
-                          </p>
-                          <p className="mt-2 text-sm text-slate-300">
-                            Linked back to the exact Canvas source so students can verify before
-                            acting.
-                          </p>
-                        </div>
-                        <div className="rounded-2xl border border-white/8 bg-white/5 p-3">
-                          <p className="text-xs tracking-[0.3em] text-slate-500 uppercase">
-                            Next actions
-                          </p>
-                          <ul className="mt-2 space-y-2 text-sm text-slate-300">
-                            <li>Generate flashcards from the review sheet</li>
-                            <li>Schedule a study block on the calendar</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="space-y-4">
-                    <Card className="border-white/8 bg-white/5 p-4">
-                      <p className="text-xs tracking-[0.3em] text-slate-500 uppercase">
-                        Why judges care
-                      </p>
-                      <ul className="mt-4 space-y-3 text-sm leading-6 text-slate-300">
-                        <li>Starts inside Canvas, not another tab maze.</li>
-                        <li>Uses course materials as source-of-truth context.</li>
-                        <li>Centralizes chat, review, and scheduling in one loop.</li>
-                      </ul>
-                    </Card>
-                    <Card className="border-white/8 bg-gradient-to-br from-[#c40f11]/20 to-[#5c6cf0]/14 p-4">
-                      <p className="text-sm font-medium text-white">
-                        From ingestion to review plan
-                      </p>
-                      <p className="mt-2 text-sm leading-6 text-slate-200">
-                        GURT captures slides, notes, and Canvas modules automatically, then turns
-                        them into cited answers, flashcards, practice exams, and calendar-ready
-                        study blocks.
-                      </p>
-                    </Card>
-                  </div>
-                </div>
+                <Badge variant="accent">Live product UI</Badge>
+              </div>
+              <div className="overflow-hidden rounded-[2rem] border border-white/12 bg-[#0f131c]">
+                <Image
+                  src="/images/hero-gurt.png"
+                  alt="GURT Chrome extension screenshot"
+                  width={675}
+                  height={1282}
+                  priority
+                  className="h-auto w-full"
+                />
               </div>
             </Card>
           </Container>
@@ -206,23 +149,6 @@ export default function Home() {
                 <p className="mt-3 text-base leading-7 text-slate-300">{point.description}</p>
               </Card>
             ))}
-          </div>
-        </Section>
-
-        <Section id="demo" eyebrow="Demo" title="Demo" description="See the workflow in motion.">
-          <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-            <Card className="border-white/8 bg-white/5 p-6">
-              <h3 className="text-2xl font-semibold text-white">How GURT works</h3>
-              <ul className="mt-5 space-y-4 text-base leading-7 text-slate-300">
-                <li>The Chrome extension opens directly on a Canvas course page.</li>
-                <li>Course materials are ingested into a knowledge base with minimal setup.</li>
-                <li>
-                  Students can ask grounded questions, inspect citations, and generate review
-                  artifacts.
-                </li>
-              </ul>
-            </Card>
-            <YouTubeEmbed />
           </div>
         </Section>
 

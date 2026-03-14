@@ -51,13 +51,11 @@ export const navLinks: NavLink[] = [
   { href: '#story', label: 'GURT in action' },
   { href: '#features', label: 'Features' },
   { href: '#trust', label: 'Trust' },
-  { href: '#demo', label: 'Demo' },
   { href: '#faq', label: 'FAQ' },
 ];
 
 export const footerLinks: NavLink[] = [
   { href: '#story', label: 'Story' },
-  { href: '#demo', label: 'Demo' },
   { href: '/privacy', label: 'Privacy' },
   { href: '/terms', label: 'Terms' },
 ];
@@ -224,11 +222,6 @@ export const trustPoints: TrustPoint[] = [
       'Answers point back to the originating source so students and judges can verify claims, inspect the material, and reduce hallucination risk.',
   },
 ];
-
-export const demoVideo = {
-  title: 'GURT demo walkthrough',
-  fallbackVideoId: 'dQw4w9WgXcQ',
-} as const;
 
 export const faqs: FaqItem[] = [
   {

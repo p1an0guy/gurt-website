@@ -4,13 +4,14 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 
+const defaultFormspreeEndpoint = 'https://formspree.io/f/mojklnnz';
 const placeholderEndpoints = [
   'https://formspree.io/f/placeholder',
   'https://formspree.io/f/yourformid',
 ];
 
 export function WaitlistForm() {
-  const endpoint = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT ?? '';
+  const endpoint = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT ?? defaultFormspreeEndpoint;
   const [status, setStatus] = useState<'idle' | 'error' | 'success' | 'submitting'>('idle');
   const [message, setMessage] = useState('');
 
@@ -22,8 +23,9 @@ export function WaitlistForm() {
         onSubmit={async (event) => {
           event.preventDefault();
           setStatus('submitting');
+          const form = event.currentTarget;
 
-          const formData = new FormData(event.currentTarget);
+          const formData = new FormData(form);
           const email = String(formData.get('email') ?? '').trim();
           const schoolOrMajor = String(formData.get('schoolOrMajor') ?? '').trim();
           const website = String(formData.get('website') ?? '').trim();
@@ -31,7 +33,7 @@ export function WaitlistForm() {
           if (website.length > 0) {
             setStatus('success');
             setMessage('Thanks. Your request has been recorded.');
-            event.currentTarget.reset();
+            form.reset();
             return;
           }
 
@@ -71,7 +73,7 @@ export function WaitlistForm() {
 
             setStatus('success');
             setMessage('Thanks. You are on the waitlist for launch updates.');
-            event.currentTarget.reset();
+            form.reset();
           } catch {
             setStatus('error');
             setMessage('Submission failed. Please retry in a moment.');
